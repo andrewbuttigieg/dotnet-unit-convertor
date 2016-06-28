@@ -9,10 +9,12 @@
     "defaultNamespace": "dotnet_unit_convertor"
   },
 
-  "dependencies": {
+ "dependencies": {
+    "xunit": "2.1.0-beta4-build3109",
+    "xunit.runner.dnx": "2.1.0-beta4-build134"
   },
-
   "commands": {
+    "test": "xunit.runner.dnx",
     "dotnet_unit_convertor": "dotnet_unit_convertor"
   },
 

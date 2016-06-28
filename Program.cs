@@ -9,7 +9,11 @@ namespace dotnet_unit_convertor
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World");
+            var convertor = new Convertor();
+            Console.WriteLine(convertor.Convert("f", "c", 100));
+            Console.WriteLine(convertor.Convert("k", "c", 0));
+            Console.WriteLine(convertor.Convert("k", "f", 0));
+            Console.WriteLine(convertor.Convert("f", "k", 0));
             Console.Read();
         }
     }
