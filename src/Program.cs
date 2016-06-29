@@ -10,11 +10,16 @@ namespace dotnet_unit_convertor
         public static void Main(string[] args)
         {
             var convertor = new Convertor();
-            Console.WriteLine(convertor.Convert("f", "c", 100));
-            Console.WriteLine(convertor.Convert("k", "c", 0));
-            Console.WriteLine(convertor.Convert("k", "f", 0));
-            Console.WriteLine(convertor.Convert("f", "k", 0));
-            Console.Read();
+             Console.WriteLine("Welcome to unit conversion! Type in a number and the unit to convert from and to and press Enter.");
+             Console.WriteLine("Supported notation looks like this: 120fc.");
+            var input = Console.ReadLine();
+
+            var unitFrom = input[input.Length-2].ToString();
+            var unitTo = input[input.Length-1].ToString();
+            var toConvert = input.Substring(0, input.Length - 2);
+            var toConvertDecimal = decimal.Parse(toConvert);
+
+            Console.WriteLine(convertor.Convert(unitFrom, unitTo, toConvertDecimal));
         }
     }
 }
