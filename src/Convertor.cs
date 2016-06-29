@@ -30,7 +30,7 @@ namespace dotnet_unit_convertor
         {
             var key = new Tuple<string, string>(from, to);
             if (conversionMap.ContainsKey(key))
-                return  Math.Round(conversionMap[key](unit));
+                return  Math.Round(conversionMap[key](unit) * 100m) / 100m;
             else
                 throw new Exception("Conversion not implemented");
         }

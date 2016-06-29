@@ -13,7 +13,7 @@ namespace dotnet_unit_convertor
             var convertor = new Convertor();
             var celcius =  convertor.Convert("f", "c", 100);
 
-            Assert.Equal(celcius, 38m);
+            Assert.Equal(celcius, 37.78m);
         }
     }
 }
