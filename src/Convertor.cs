@@ -24,6 +24,9 @@ namespace dotnet_unit_convertor
                 var c = self.Convert("f", "c", d);
                 return self.Convert("c", "k", c);
              });
+            conversionMap.Add(TupleFactory.Gen("d", "r"), (d) =>{ return d * ((decimal)Math.PI / 180m); } );
+            conversionMap.Add(TupleFactory.Gen("r", "d"), (d) =>{ return d * (180m / (decimal)Math.PI); } );
+             
         }
 
         public decimal Convert(string from, string to, decimal unit)
