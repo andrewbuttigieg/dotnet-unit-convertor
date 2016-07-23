@@ -1,3 +1,5 @@
 language: csharp
 script:
   - dotnet src/dotnet-unit-convertor
+before_script:
+  - dotnet restore
