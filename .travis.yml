@@ -1,7 +1,4 @@
 language: csharp  
 sudo: required
-install: curl -s https://raw.githubusercontent.com/dotnet/cli/rel/1.0.0-preview2/scripts/obtain/dotnet-install.sh
 script:
-  - dotnet build src/dotnet-unit-convertor
-before_script:
-  - dotnet restore
+  - xbuild src/dotnet-unit-convertor
