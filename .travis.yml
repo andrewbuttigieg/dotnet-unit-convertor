@@ -1,5 +1,5 @@
 language: csharp
-solution: travis-mono-test.sln
+solution: src/dotnet-unit-convertor.json
 
 matrix:
   include:
@@ -7,5 +7,3 @@ matrix:
       mono: none
       env: DOTNETCORE=1  # optional, can be used to take different code paths in your script
     - mono: latest
-script:
-- dotnet build src/dotnet-unit-convertor
