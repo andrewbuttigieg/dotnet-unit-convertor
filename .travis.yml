@@ -1,9 +1,24 @@
+#language: csharp
+#solution: src/dotnet-unit-convertor.json
 language: csharp
-solution: src/dotnet-unit-convertor.json
-
-matrix:
-  include:
-    - dotnet: 1.0.1
-      mono: none
-      env: DOTNETCORE=1  # optional, can be used to take different code paths in your script
-    - mono: latest
+dist: trusty
+sudo: required
+mono: none
+dotnet: 1.0.0-preview2-1-003177
+branches:
+  only:
+    - master
+    - develop
+before_script:
+  - chmod a+x ./travis-build.sh
+#  - chmod a+x ./run-tests.sh
+#  - chmod a+x ./after-success.sh
+script:
+  - ./travis-build.sh
+#  - ./run-tests.sh
+#after_success:
+#  - ./after-success.sh
+notifications:
+  email:
+    on_success: never
+    on_failure: always
