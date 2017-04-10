@@ -1,5 +1,5 @@
 #language: csharp
-#solution: src/dotnet-unit-convertor.json
+#solution: src/dotnet-unit-convertor.json 
 language: csharp
 dist: trusty
 sudo: required
